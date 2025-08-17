@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Purchase Form</title>
+  <style>
+    body { background: #e6f2f3; font-family: Arial, sans-serif; color: #2f4f4f; text-align: center; }
+    h1 { color: #007777; }
+    hr { border: none; height: 2px; background: #b2d8d8; width: 60%; }
+    form { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); width: 45%; margin: auto; }
+    table { width: 100%; }
+    td { padding: 8px; text-align: left; }
+    input, select { padding: 6px; width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+    input[type=submit] { background: #007777; color: #fff; border: none; border-radius: 6px; padding: 10px; cursor: pointer; }
+    input[type=submit]:hover { background: #005555; }
+    p, a { color: #007777; }
+  </style>
+</head>
+<body>
+  <h1>Purchase Form</h1>
+  <hr>
+  <form action="home.html" method="post">
+    <table>
+      <tr><td>Name:</td><td><input type="text" name="name" required></td></tr>
+      <tr><td>Email:</td><td><input type="email" name="email" required></td></tr>
+      <tr><td>Phone:</td><td><input type="tel" name="phone" required></td></tr>
+      <tr><td>Quantity:</td><td><input type="number" name="quantity" min="1" max="10"></td></tr>
+      <tr><td>Delivery Date:</td><td><input type="date" name="delivery"></td></tr>
+      <tr><td>Payment:</td>
+        <td><select name="payment"><option>UPI</option><option>Credit Card</option><option>Cash on Delivery</option></select></td></tr>
+      <tr><td colspan="2" style="text-align:center;"><input type="submit" value="Buy Now"></td></tr>
+    </table>
+  </form>
+  <p>Don't have an account? <a href="#">Register here</a></p>
+  <a href="home.html">Back to Home</a>
+</body>
+</html>

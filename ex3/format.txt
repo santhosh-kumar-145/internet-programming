@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Online Shopping</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header id="main-header">
+    <h1><center>Glow Zaar</center></h1>
+</header>
+<nav>
+    <center>
+       <a href="makeup.html">Make up</a> |        <a href="clothing.html">Clothing</a> |
+       <a href="footwear.html">Footwear</a> |
+       <a href="purchase.html">Purchase</a>    
+    </center>
+</nav>
+<br><br>
+<section>
+    <center>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td align="center" class="product-cell">
+                <a href="makeup.html">
+                    <img src="https://t4.ftcdn.net/jpg/02/73/55/33/360_F_273553300_sBBxIPpLSn5iC5vC8FwzFh6BJDKvUeaC.jpg" alt="Make up" width="200" height="200">
+                </a><br>
+                <h3>Makeup</h3>
+                <a href="makeup.html">Add to cart</a>
+            </td>
+            <td align="center" class="product-cell">
+                <a href="clothing.html">
+                    <img src="https://media.istockphoto.com/id/653003428/photo/fashionable-clothes-in-a-boutique-store-in-london.jpg?s=612x612&w=0&k=20&c=UafU4a4xSbepJow4kvNu0q-LD4hFUoli7q3fvwkp79s=" alt="Clothing" width="200" height="200">
+                </a><br>
+                <h3>Clothing</h3>
+                <a href="clothing.html">Add to cart</a>
+            </td>
+            <td align="center" class="product-cell">
+                <a href="footwear.html">
+                    <img src="https://media.istockphoto.com/id/1279108197/photo/variety-of-womens-fashion-comfortable-shoes-of-all-seasons-on-a-light-background-top-view.jpg?s=612x612&w=0&k=20&c=_mdUMo2tsufgilqv8IQeW6hp8YjICTR8_tF-YP1Zgxk=" alt="Footwear" width="200" height="200">
+                </a><br>
+                <h3>Footwear</h3>
+                <a href="footwear.html">Add to cart</a>
+            </td>
+        </tr>
+    </table>
+    </center>
+</section>
+<footer>
+    <center>
+        <h2>Our Store Location</h2>
+        <iframe  
+            src="https://www.google.com/maps?q=New+York&output=embed"              width="400"              height="300">
+        </iframe>
+        <p>&copy; 2025 My Online Store</p>
+    </center>
+</footer>
+</body>
+</html>
+

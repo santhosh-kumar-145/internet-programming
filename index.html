@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .checkbox-group {
+      margin-bottom: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Course Registration</h2>
+    <form id="registrationForm">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" required>
+
+      <label for="roll">Roll Number:</label>
+      <input type="text" id="roll" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" required>
+
+      <label for="semester">Semester:</label>
+      <select id="semester" required>
+        <option value="">--Select--</option>
+        <option>Semester 1</option>
+        <option>Semester 2</option>
+        <option>Semester 3</option>
+        <option>Semester 4</option>
+      </select>
+
+      <label for="courseType">Course Type:</label>
+      <select id="courseType" required>
+        <option value="">--Select--</option>
+        <option>Core</option>
+        <option>Elective</option>
+        <option>Lab</option>
+      </select>
+
+      <label>Select Courses:</label>
+      <div class="checkbox-group"><input type="checkbox" value="Mathematics"> Mathematics</div>
+      <div class="checkbox-group"><input type="checkbox" value="Computer Science"> Computer Science</div>
+      <div class="checkbox-group"><input type="checkbox" value="Electronics"> Electronics</div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="confirm" required> I confirm details are correct
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById("fullname").value.trim();
+      const roll = document.getElementById("roll").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const pass = document.getElementById("password").value;
+      const cpass = document.getElementById("confirmPassword").value;
+      const semester = document.getElementById("semester").value;
+      const courseType = document.getElementById("courseType").value;
+      const confirmCheck = document.getElementById("confirm").checked;
+
+      // Regex Patterns
+      const namePattern = /^[A-Za-z\s]+$/;
+      const rollPattern = /^[A-Za-z0-9]+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phonePattern = /^[0-9]{10}$/;
+      const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+      if (!namePattern.test(fullname)) {
+        alert("❌ Full Name must contain only letters and spaces!");
+        return;
+      }
+
+      if (!rollPattern.test(roll)) {
+        alert("❌ Roll Number must be alphanumeric!");
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("❌ Invalid Email format!");
+        return;
+      }
+
+      if (!phonePattern.test(phone)) {
+        alert("❌ Phone Number must be exactly 10 digits!");
+        return;
+      }
+
+      if (!passwordPattern.test(pass)) {
+        alert("❌ Password must be at least 6 characters with letters and numbers!");
+        return;
+      }
+
+      if (pass !== cpass) {
+        alert("❌ Passwords do not match!");
+        return;
+      }
+
+      if (!semester) {
+        alert("⚠️ Please select a Semester!");
+        return;
+      }
+
+      if (!courseType) {
+        alert("⚠️ Please select a Course Type!");
+        return;
+      }
+
+      if (!confirmCheck) {
+        alert("⚠️ Please confirm your details!");
+        return;
+      }
+      
+      alert("✅ Registered Successfully!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup Product Showcase</title>
+
+  <style>
+    body {
+      background-color: #f3f0fa; /* soft lavender background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #3e334e;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #6e48aa; /* deep lavender */
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2.5em;
+    }
+
+    hr {
+      border: 0;
+      height: 2px;
+      background: #c5b3e6;
+      width: 60%;
+      margin: 20px auto;
+    }
+
+    table {
+      background-color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      padding: 30px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    td {
+      padding: 20px;
+      font-size: 1em;
+      color: #4b3b60;
+    }
+
+    h3 {
+      color: #6b3e8e;
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    video, audio {
+      border: 2px solid #ccb8e1;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 12px 25px;
+      background-color: #6e48aa;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #5a3d8b;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      table {
+        width: 95%;
+      }
+
+      img, video {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Makeup Product Showcase</h1>
+  <hr>
+
+  <table cellpadding="10">
+    <tr>
+      <td align="center">
+        <img src="https://t4.ftcdn.net/jpg/02/73/55/33/360_F_273553300_sBBxIPpLSn5iC5vC8FwzFh6BJDKvUeaC.jpg" alt="Makeup Product"><br>
+        <h3>All-in-One Makeup Kit</h3>
+        <p><b>Price:</b> ₹1,999</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          Discover effortless beauty with our All-in-One Makeup Kit. This deluxe collection includes
+          highly pigmented eyeshadows, blendable blushes, a buildable foundation, and nourishing lip tints.
+          Ideal for all skin tones, it's the perfect companion for everyday radiance or a glamorous night out.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>Product Demo Video</h3>
+        <video width="400" controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>Product Audio Description</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+  </table>
+
+  <center><a href="home.html">Back to Home</a></center>
+
+</body>
+</html>
+
